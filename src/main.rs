@@ -1,6 +1,3 @@
-// A demonstration of drawing to a very large texture, capturing the texture in its original size
-// as a PNG and displaying a down-scaled version of the image within the window each frame.
-
 use nannou::prelude::*;
 pub mod post_processing_effect;
 pub use crate::post_processing_effect::PostProcessingEffect;
