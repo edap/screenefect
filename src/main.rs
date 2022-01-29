@@ -7,14 +7,11 @@ fn main() {
 }
 
 struct Model {
-    // The off-screen effect.
     effect: PostProcessingEffect,
 }
 
 fn model(app: &App) -> Model {
     let texture_size = [800, 800];
-
-    // Create the window.
     let [win_w, win_h] = [texture_size[0], texture_size[1]];
     let w_id = app
         .new_window()
@@ -26,7 +23,7 @@ fn model(app: &App) -> Model {
 
     let sample_count = app.window(w_id).unwrap().msaa_samples();
 
-    // load the sahders
+    // load the shaders
     let vs_desc = wgpu::include_wgsl!("shaders/vs.wgsl");
     // at the moment PostProcessingEffect works only with the default sample_count value, that is 4.
     let fs_desc = wgpu::include_wgsl!("shaders/fs_msaa4_noise.wgsl");
