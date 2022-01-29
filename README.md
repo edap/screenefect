@@ -1,2 +1,2 @@
 # screenefect
-clone this in your nannou workspace
+clone it in your nannou workspace
